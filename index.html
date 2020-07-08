@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<head>
+    <title>My First Smart Contract</title>
+    <script src="C:/Users/EYE/Desktop/blockchain/node_modules/web3.js/node_modules/web3/dist/web3.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style-index.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="cute-alert.js"></script>
+    <script src="send_receive_address.js"></script>
+    <script src="send.js"></script>
+    <script src="balance.js"></script>
+</head>
+
+<body class="back">
+ 
+    <div class="center">
+        <button onclick="document.getElementById('id01').style.display='block'" style="width:150px; ">Transaction</button></br>
+        <button id="balan" onclick="balanc(); document.getElementById('id02').style.display='block'" style="width:150px; ">View Balances</button></br>
+        <button onclick="location.href='logs.html'" type="button" style="width:150px;">View logs</button>
+    </div>
+
+    <div id="id01" class="modal" style="text-align:center">
+        <form class="modal-content animate" method="post" id="login_form">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Window">&times;</span>
+                <img src="ethereum.png" alt="Avatar" class="avatar">
+            </div>
+            <div class="container" style="text-align:center">
+
+                <div class="address">
+                    <div class="label_from">
+                        <label for="from"><b>Sender</b></label><br /><br />
+                    </div>
+                    <select id="source"></select><br /><br /><br /><br />
+
+                    <div class="label_to">
+                        <label for="To"><b>Receiver</b></label><br /><br />
+                    </div>
+                    <select id="receive"></select>
+                </div>
+                <br />
+                <input class="user_in" type="number" style="width:120px; height: 30px" id="userInput" placeholder="Amount" />
+                <div class="box">
+                    <select id="selToken" style="width:120px; height:40px; top: 80%">
+                        <option value="wei">Wei</option>
+                        <option value="gwei">Gwei</option>
+                        <option value="finney">Finney</option>
+                        <option value="ether">Ether</option>
+                        <option value="kwei">Kwei</option>
+                        <option value="babbage">Babbage</option>
+                        <option value="femtoether">Femtoether</option>
+                        <option value="Mwei">Mwei</option>
+                        <option value="lovelace">Lovelace</option>
+                        <option value="picoether">Picoether</option>
+                        <option value="shannon">Shannon</option>
+                        <option value="nanoether">Nanoether</option>
+                        <option value="nano">Nano</option>
+                        <option value="szabo">Szabo</option>
+                        <option value="microether">Microether</option>
+                        <option value="milli">Milli</option>
+                    </select><br />
+                    <span id="error"></span><br />
+                    <button type="button" id="submitbutton" onclick="return send('submitbutton');" value="Send">Send</button>
+                    <p id="recp" style=" font-size: 15px; font-weight: bold;">
+                    </p>
+                </div>
+            </div>
+
+        </form>
+    </div>
+    <div id="id02" class="modal" style="text-align:center">
+        <form class="modal-content animate" method="post" id="view_bal">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Window">&times;</span>
+                <img src="ethereum.png" alt="Avatar" class="avatar">
+            </div>
+            <p id="bal" style=" font-size: 15px; font-weight: bold;"></p>
+        </form>
+    </div>
+
+ 
+</body>
+</html>

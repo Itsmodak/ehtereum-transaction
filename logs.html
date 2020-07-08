@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<title>My First Smart Contract</title>
+<script src="C:/Users/EYE/Desktop/blockchain/node_modules/web3.js/node_modules/web3/dist/web3.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" crossorigin="anonymous"></script>
+
+<p id="msg" style=" font-size: 15px; font-weight: bold;">
+</p>
+
+
+<script>
+
+    var web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
+    const f = async () => {
+        var x = "";
+        var b_n;
+        await web3.eth.getBlockNumber().then(function(b_n){block = b_n});
+        for(var i=block;i>=1;i--)
+        {
+            await web3.eth.getTransactionFromBlock(i).then(function(acc){ sen = acc });
+
+            var el_down = document.getElementById("msg");
+
+            var out = '';
+            for (var p in sen) {
+                out += p + ': ' + sen[p] + '<br>';
+            }
+                        
+                    
+            x += '<p style = "border-style: solid;">' +out + '<p>'+'<br>';
+
+        }
+        if(block == 0)
+        {
+            document.getElementById("msg").innerHTML = '<p style = "font-size: 60px; color: red;text-align: center;">' + "Not any transaction yet" + '</p>';
+        }
+        else{
+            el_down.innerHTML = x + '<br>';
+        }
+    }
+    f();
+    </script>
+
+</html>
