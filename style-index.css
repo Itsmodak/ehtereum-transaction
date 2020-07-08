@@ -1,0 +1,192 @@
+﻿body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+
+
+img.avatar {
+    width: 40%;
+    border-radius: 50%;
+}
+
+
+input[type=number] {
+    width: 20%;
+    padding: 12px 20px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 20%;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px #1a102d;
+}
+
+
+.modal {
+    display: none;
+    background-color: rgb(255,255,255);
+    background-color: rgba(0,0,0, 0.4);
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding-top: 90px;
+}
+
+
+.modal-content {
+    backdrop-filter: blur(5px);
+    background-color: rgba(200,200,255,0.2);
+    margin: 0% auto 0% auto;
+    border: 2px solid #888;
+    border-radius: 25px;
+    width: 40%;
+}
+
+
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: red;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+    .close:hover,
+    .close:focus {
+        color: red;
+        cursor: pointer;
+    }
+
+
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {
+        -webkit-transform: scale(0)
+    }
+
+    to {
+        -webkit-transform: scale(1)
+    }
+}
+
+@keyframes animatezoom {
+    from {
+        transform: scale(0)
+    }
+
+    to {
+        transform: scale(1)
+    }
+}
+
+@media screen and (max-width: 300px) {
+    span.psw {
+        display: block;
+        float: none;
+    }
+
+    .cancelbtn {
+        width: 100%;
+    }
+}
+
+.address select {
+    background-color: #3e3e4d;
+    color: white;
+    padding: 12px;
+    width: auto;
+    border: none;
+    font-size: 15px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+    -webkit-appearance: button;
+    appearance: button;
+    outline: none;
+}
+
+
+.box select {
+    background-color: #323255;
+    color: white;
+    display: inline padding: 10px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    width: auto;
+    margin: 2px 0;
+    font-size: 20px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+    -webkit-appearance: button;
+    appearance: button;
+    outline: none;
+}
+
+
+
+
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.back {
+    background-image: url("C:/Users/EYE/Desktop/blockchain/project/images/background.jpg");
+    height: 100%;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+
+
+.center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    color: aqua;
+}
+
+.label_to {
+    position: fixed;
+    margin: 0;
+    position: absolute;
+    left: 17%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+.label_from {
+    position: fixed;
+    margin: 0;
+    position: absolute;
+    left: 17%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    color: white;
+}
